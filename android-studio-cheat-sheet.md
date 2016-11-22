@@ -3,7 +3,7 @@
 ### General  
 
 | Description       | Windows/Linux        | Mac                 |  
------------------------------------------------------------------ 
+| ----------------- | -------------------- | ------------------- |  
 | Save all          | Control + S          | Command + S         |  
 | Open Settings     | Control + Alt + S    | Command + ,         |  
 | Open Terminal     | Alt + F12            | Alt + F12           |  
@@ -11,7 +11,7 @@
 ### Search
 
 | Description       | Windows/Linux        | Mac                 |  
------------------------------------------------------------------  
+| ----------------- | -------------------- | ------------------- |  
 | Search everywhere | Shift + Shift        | Shift + Shift       |  
 | Search commands   | Control + Shift + A  | Command + Shift + A |  
 | Find              | Control + F          | Command + F         |  
@@ -20,7 +20,7 @@
 ### Navigation  
 
 | Description       | Windows/Linux               | Mac                         |  
---------------------------------------------------------------------------------  
+| ----------------- | --------------------------- | --------------------------- |  
 | Jump to class     | Control + N                 | Command + O                 |  
 | Jump to file      | Control + Shift + N         | Command + Shift + O         |  
 | Jump to method    | Control + Up/Down           | Alt + Up/Down               |  
