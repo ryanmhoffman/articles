@@ -26,6 +26,8 @@
 | Jump to method    | Control + Up/Down           | Alt + Up/Down               |  
 | Switch tabs       | Alt + Right/Left            | Control + Right/Left        |  
 | Jump to last edit | Control + Shift + Backspace | Command + Shift + Backspace |  
+| Jump to Editor    | Esc                         | Esc                         |  
+| Close Current Tab | Control + F4                | Command + W                 |  
 
 ### Editing Code  
 
