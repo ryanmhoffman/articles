@@ -28,33 +28,22 @@
 | Jump to last edit | Control + Shift + Backspace | Command + Shift + Backspace |  
 
 ### Editing Code  
-This is the one we try to spend the most time on, and even though searching for the correct command is easy with the shortcut above, it is still quicker to memorize these shortcuts and add them to our workflow. These will really help you get *past* the editor and focus only on the editing.  
 
-#### Auto-Completion
-**Tab** (Mac, Windows, Linux)  
-**Enter** (Mac, Windows, Linux)  
-
-#### Comments  
-Single Line Comment  
-**Command + /** (Mac)  
-**Control + /** (Windows, Linux)  
-Multi Line Comment  
-**Command + Alt + /** (Mac)  
-**Control + Shift + /** (Windows, Linux)  
-
-#### Show Parameters  
-**Command + p** (Mac)  
-**Control + p** (Windows, Linux)  
-This one is useful if you can't remember what parameters a method takes.  
-
-#### Refactoring  
-Renaming a variable/method/class etc.
-**Shift + F6** (Mac)  
-**Control + F6** (Windows, Linux)  
-
-#### Intelligent Code Generation  
-**Command + N** (Mac)  
-**Alt + Insert** (Windows, Linux)  
-
-#### Live Templates
-
+| Description           | Windows/Linux             | Mac                       |  
+| --------------------- | ------------------------- | ------------------------- |  
+| Code Completion       | Control + Space           | Control + Space           |  
+| Smart Code Completion | Control + Shift + Space   | Control + Shift + Space   |  
+| Generate Code         | Alt + Insert              | Command + N               |  
+| Override Methods      | Control + O               | Control + O               |  
+| Implement Methods     | Control + I               | Control + I               |  
+| Surround With         | Control + Alt + T         | Command + Option + T      |  
+| Comment Line          | Control + /               | Command + /               |  
+| Comment Block         | Control + Shift + /       | Command + Alt + /         |  
+| Show Parameters       | Control + P               | Command + P               |  
+| Rename                | Shift + F6                | Shift + F6                |  
+| Change Signature      | Control + F6              | Command + F6              |  
+| Next Error            | F2                        | F2                        |  
+| Previous Error        | Shift + F2                | Shift + F2                |  
+| Build                 | Control + F9              | Command + F9              |  
+| Build and Run         | Shift + F10               | Command + R               |  
+| Debug                 | Shift + F9                | Command + D               |  
