@@ -31,3 +31,11 @@ dependencies {
 Once you add that line Android Studio will let you know that gradle files have changed and prompt you to sync your project with gradle. Once you do that you can immediatly begin using the library in your code. If a new version is released just change the version number in your gradle file and sync your project again and that's it.  
 
 ## Adding Libraries as .jar Files  
+
+
+
+## Adding Modules  
+
+I have already mentioned modules above a little bit, but I haven't really explained what they are or what they are used for. Modules are basically just portions of code that are broken out into groups to make them easily reuseable. You can think of them as mini projects within your main project. As I mentioned earlier, when you create an app for mobile, wear, auto, and tv, Android Studio automatically sets up each as its own module. This is so you can define activities and views for each in their own module without it affecting any of the others. But you can also create your own modules. I like to create a module for all of the logic and data classes in my apps, that way the code can be shared to each portion of the app.  
+
+For instance, if I have an app that has a phone portion and a wear portion, most likely it will pull data from a server and both portions will need to use that data. Rather than retrieve that data and use it in the phone module, then retrieve and use it in the wear module, I build a separate data module to retrieve the data from the server and both the phone and wear modules can use it as necessary from there. Pretty much any logic, data loading/storage can be put in modules this way to save writing it all multiple times. 
