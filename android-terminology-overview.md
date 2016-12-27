@@ -18,3 +18,13 @@ In Android, px is short for pixels. It corresponds to actual pixels on the scree
   android:layout_width:"50dp"
   android:layout_height:"50dip" />
 ```
+DP and DIP are actually the same thing and can be used interchangeably. They stand for Density Independent Pixels. This is one of the most useful measurements for designing across multiple screen densities and having everything lay out properly. Density independent pixels scale views so they lay out proportionally across various pixel densities. On a screen with a pixel density of 160dpi, 1dp is the same as 1px. As the pixel density increases for  higher resolution display, the ratio of dp to px will change. If you use dp/dip as the unit of measure, Android will decide the correct ratio for you so the views stay proportianal.  
+
+### SP  
+```
+<TextView
+  android:textSize="18sp" />
+```
+SP stands for Scale Independent Pixels. SP is very similar to DP/DIP, with only one main difference. Scale independent pixels adjust based on pixel density and user preference. This means if the user is visually impaired and specifies Large Text in their settings, sp will scale appropriately on their device. It is mainly used on text, but it can also be used on views containing text to ensure they expand to fit the text properly. If there are no custom settings specified on the user's device, sp behaves exactly the same as dp/dip.  
+
+### PT
