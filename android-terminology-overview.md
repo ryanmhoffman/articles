@@ -1,6 +1,6 @@
 # Android Unit of Measure Terminology  
 
-Have you ever wondered why there are so many different units of measurement in the Android architecture? You have dp, dip, sp, px, pt, in, mm, and the list could go on. Below I will run through the purpose of each and their most common use cases when designing layouts in Android.  
+Have you ever wondered why there are so many different units of measurement in the Android architecture? There is dp, dip, sp, px, pt, in and mm. Below I will run through what each one is and what their purpose is within the Android framework.
 
 ### PX  
 
@@ -18,13 +18,30 @@ In Android, px is short for pixels. It corresponds to actual pixels on the scree
   android:layout_width:"50dp"
   android:layout_height:"50dip" />
 ```
-DP and DIP are actually the same thing and can be used interchangeably. They stand for Density Independent Pixels. This is one of the most useful measurements for designing across multiple screen densities and having everything lay out properly. Density independent pixels scale views so they lay out proportionally across various pixel densities. On a screen with a pixel density of 160dpi, 1dp is the same as 1px. As the pixel density increases for  higher resolution display, the ratio of dp to px will change. If you use dp/dip as the unit of measure, Android will decide the correct ratio for you so the views stay proportianal.  
+DP and DIP are actually the same thing and can be used interchangeably. They stand for Density Independent Pixels. This is one of the most useful measurements for designing across multiple screen densities and having everything lay out properly. Density independent pixels scale views so they lay out proportionally across various pixel densities. On a screen with a pixel density of 160dpi, 1dp is the same as 1px. As the pixel density increases for  higher resolution display, the ratio of dp to px will change. If you use dp/dip as the unit of measure, Android will decide the correct ratio for you so the views stay proportianal across screens with various pixel densities.  
 
 ### SP  
 ```
 <TextView
   android:textSize="18sp" />
 ```
-SP stands for Scale Independent Pixels. SP is very similar to DP/DIP, with only one main difference. Scale independent pixels adjust based on pixel density and user preference. This means if the user is visually impaired and specifies Large Text in their settings, sp will scale appropriately on their device. It is mainly used on text, but it can also be used on views containing text to ensure they expand to fit the text properly. If there are no custom settings specified on the user's device, sp behaves exactly the same as dp/dip.  
+SP stands for Scale Independent Pixels. SP is very similar to DP/DIP, with one main difference. Scale independent pixels adjust based on pixel density and user preference. This means if the user is visually impaired and specifies Large Text in their settings, sp will scale appropriately on their device. It is mainly used on text, but it can also be used on views containing text to ensure they expand to fit the text properly. If there are no custom settings specified on the user's device, sp behaves exactly the same as dp/dip.  
 
-### PT
+### PT  
+```
+<View
+  android:layout_width:"25pt"
+  android:layout_height:"35pt" />
+```
+PT is short for Point, and it is simply 1/72 of an inch. This assumes a screen with 72dpi (dots per inch.)  
+
+### MM and IN  
+```
+<View
+  android:layout_width:"1in"
+  android:layout_height:"15mm" />
+```
+MM is millimeters and IN is inches. These units refer to the actual size and ignore factors like pixel density and screen size. Using a value like "1in" means the view will take up exactly 1 inch of screen real estate, and the same goes for millimeters.  
+
+## Conclusion  
+When designing layouts, dp and sp are definitely the most commonly used units due to how easily they scale across different screens. It is always recommended that you test your layouts on as many different screen sizes as possible to ensure that everything is laid out as expected. Even with the units that scale across pixel densities, there can still be inconsistencies, so testing is always required. 
