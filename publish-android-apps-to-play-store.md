@@ -2,6 +2,21 @@
 Publishing an Android app is a relatively simple process, but outside of Google's own documentation there aren't a whole lot of resources on how to do it.  
 
 ### First Steps  
-After you finish writing the code for your app, you need to go back through that code one more time to make sure you remove all of the code used for debugging. There are sure to be many logging calls and possibly extra methods and classes used for testing and debugging that are not necessary for release. These should be removed to decrease the size of the final apk. It is also important to check your gradle file to make sure you aren't importing any extra libraries that you don't use in your project.  
+After you finish writing the code for your app, you need to go back through that code one more time to make sure you remove all of the code used for debugging. There are sure to be many logging calls and possibly extra methods and classes used for testing and debugging that are not necessary for release. These should be removed to decrease the size of the final apk. It is also important to check your gradle file to make sure you aren't importing any extra libraries that you don't use in your project. While you have the gradle file open, you will most likely want to enable ProGuard on your code. ProGuard is a tool that will go through all of your code, including any imported libraries you are using, and remove any classes or methods that are not used. This is the tool that will help you keep your method count under 64k, which is required by the Android platform. To enable ProGuard, look in the *release* buildType and add ```minifyEnabled true```. It should look something like this:
 
-After that you will need to open your manifest file and delete the attribute ```android:debuggable```. 
+```
+...
+buildTypes {
+  release {
+    minifyEnabled true
+    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+  }
+}
+...
+```  
+
+After that you will need to open your manifest file and delete the attribute ```android:debuggable```. While in there you will want to double-check that you have set values for ```android:versionName``` and ```android:versionCode```. If it's not there, don't panic, these can also be set in your build.gradle file, and usually are. They would be set in the ```defaultConfig``` section. Once you are sure both of those values are set either in the manifest or with gradle, you are almost done with your code.  
+
+The last thing you might need to update is your production server, if you are using one. If you were using test data from a test server, you will want to make sure all calls to the server are updated to your production server. Once that's updated you will probably need to test a few more times to make sure everything works as expected.  
+
+### Build the Release apk  
