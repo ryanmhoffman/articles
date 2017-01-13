@@ -20,3 +20,6 @@ After that you will need to open your manifest file and delete the attribute ```
 The last thing you might need to update is your production server, if you are using one. If you were using test data from a test server, you will want to make sure all calls to the server are updated to your production server. Once that's updated you will probably need to test a few more times to make sure everything works as expected.  
 
 ### Build the Release apk  
+Now that your code is completely ready for to go, it is time to build the app. The final build gets packaged into a .apk file extension. You can think of it as Android's equivalent to a .jar file. Android Studio makes it fairly simple to generate the final apk. The generated apk *must* be signed with your own certificate. It is also important to keep the key for this certificate, because without it, you will not be able to publish updates to your app. Do not store the key in a public place. That would allow anyone with access to the key to publish updates to your app as you, so you should be the only one with the key.  
+
+#### Signing the App  
