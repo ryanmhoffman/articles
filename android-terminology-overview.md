@@ -25,7 +25,7 @@ DP and DIP are actually the same thing and can be used interchangeably. They sta
 <TextView
   android:textSize="18sp" />
 ```
-SP stands for Scale Independent Pixels. SP is very similar to DP/DIP, with one main difference. Scale independent pixels adjust based on pixel density and user preference. This means if the user is visually impaired and specifies Large Text in their settings, sp will scale appropriately on their device. It is mainly used on text, but it can also be used on views containing text to ensure they expand to fit the text properly. If there are no custom settings specified on the user's device, sp behaves exactly the same as dp/dip.  
+SP stands for Scale Independent Pixels. SP is very similar to DP/DIP, with one main difference. Scale independent pixels adjust based on pixel density and user preference. This means if the user is visually impaired and specifies Large Text in their settings, sp will scale appropriately on their device. It is mainly used on text, but it can also be used on views containing text to ensure they expand to fit the text properly. If there are no custom settings specified on the user's device, sp will behave exactly the same as dp/dip.  
 
 ### PT  
 ```
@@ -41,7 +41,7 @@ PT is short for Point, and it is simply 1/72 of an inch. This assumes a screen w
   android:layout_width:"1in"
   android:layout_height:"15mm" />
 ```
-MM is the abbreviation for millimeters, and IN is the abbreviation for inches. These units refer to actual sizes and ignore factors like pixel density and screen size. Using a value like "1in" means the view will take up exactly 1 inch of screen real estate, and the same goes for millimeters.  
+MM is the abbreviation for millimeters, and IN is the abbreviation for inches. These units refer to actual sizes and ignore factors like pixel density and screen size. Using a value like "1in" means the view will take up exactly 1 inch of screen real estate, and the same is true for millimeters.  
 
 ## Conclusion  
-When designing layouts, dp and sp are definitely the most commonly used units due to how easily they scale across different screens. It is always recommended that you test your layouts on as many different screen sizes as possible to ensure that everything is laid out as expected. Even with the units that scale across pixel densities there can still be inconsistencies, so never trust that your layout will look exactly like it does in the preview in Android Studio. 
+When designing layouts on Android, dp and sp are definitely the most commonly used units due to how easily they scale across different screens. It is always recommended that you test your layouts on as many different screen sizes as possible to ensure that everything is laid out as expected. Even with the units that scale across pixel densities there can still be inconsistencies, so never trust that your layout will look exactly like it does in the preview in Android Studio. 
